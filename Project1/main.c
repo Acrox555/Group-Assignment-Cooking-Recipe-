@@ -9,10 +9,13 @@
 //9. save accumulated data to disk
 //10. load accumulated data from disk
 
+//Group 8
 //Adam Tom Jaison,Mehak Kondal -PROG71985 - Fall 2023 - Group Assignment , Q 3
 
 #include <stdio.h>
 #include <stdbool.h>
+#include "recipe.h"
+
 
 void printWelcome();
 int main(void) {
@@ -25,6 +28,7 @@ int main(void) {
 		switch (Choice)
 		{
 		case 1:
+			addRecipe();
              break;
 		case 2: 
 			break;
@@ -58,7 +62,7 @@ void printWelcome() {
 
 //function to read user input 
 int printMenu() {
-	printf_s("1.  Add a new recipe \n");
+	printf_s("1. Add a new recipe \n");
 	printf_s("2. Delete an existing  recipe\n");  
 	printf_s("3. Display all  recipe\n");
 	printf_s("4. Display single  recipe\n");
