@@ -1,10 +1,16 @@
 #pragma once
-#define MAXRECIPES 100
+#define MAX_RECIPES 100
 #define NAMELENGTH 50
-#define MAXINGREDIENTS 15
-#define MAXINSTRUCTIONS 10
-typedef struct Recipe {
-	char name[NAMELENGTH];
-	char ingredients[MAXINGREDIENTS];
-	char instructions[MAXINSTRUCTIONS];
-}RECIPE;
+#define MAX_INGREDIENTS 150
+#define MAX_INSTRUCTIONS 1000
+typedef struct {
+    int id;
+    char recipe_name[NAMELENGTH];
+    char ingredients[MAX_INGREDIENTS];
+    char instructions[MAX_INSTRUCTIONS];
+} ITEM;
+
+typedef struct {
+    ITEM items[MAX_RECIPES];
+    int itemCount;
+} RecipeManager;
